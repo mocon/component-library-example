@@ -1,0 +1,15 @@
+{
+  "plugins": [
+    ["babel-plugin-macros"],
+    [
+      "module-resolver",
+      {
+        "root": "./",
+        "alias": {
+          "@components": "./src/components",
+          "@utils": "./src/utils"
+        }
+      }
+    ]
+  ]
+}
