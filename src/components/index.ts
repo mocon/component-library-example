@@ -1,4 +1,9 @@
-import { Box, BoxProps } from './Box'
-import { Text, TextProps } from './Text'
+import { Box } from './Box'
+import type { BoxProps } from './Box'
 
-export { Box, BoxProps, Text, TextProps }
+import { Text } from './Text'
+import type { TextProps } from './Text'
+
+export { Box, Text }
+
+export type { BoxProps, TextProps }

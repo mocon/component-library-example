@@ -12,12 +12,9 @@ import {
   typography,
 } from 'styled-system'
 
-type StyledProps = {
-  as: string
-}
-
-export const TextStyled = styled.p<StyledProps>`
+export const TextStyled = styled.p<any>`
   display: block;
+  font-family: ${({ theme }) => theme.fontFamilies.body};
   ${background};
   ${border};
   ${color};

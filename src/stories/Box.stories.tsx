@@ -1,10 +1,10 @@
 import React from 'react'
 import { Meta, Story } from '@storybook/react'
-import { Text, TextProps } from '../src/components'
+import { Box, BoxProps } from '../components'
 
 const meta: Meta = {
-  title: 'Text',
-  component: Text,
+  title: 'Box',
+  component: Box,
   argTypes: {
     children: {
       control: {
@@ -19,7 +19,11 @@ const meta: Meta = {
 
 export default meta
 
-const Template: Story<TextProps> = args => <Text {...args}>Text contents</Text>
+const Template: Story<BoxProps> = args => (
+  <Box {...args}>
+    <p>Contents</p>
+  </Box>
+)
 
 // By passing using the Args format for exported stories, you can control the props for a component for reuse in a test
 // https://storybook.js.org/docs/react/workflows/unit-testing
