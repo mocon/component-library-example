@@ -1,5 +1,8 @@
 {
   "version": "0.1.4",
+  "name": "component-library-tsdx-example",
+  "author": "Myles O'Connor",
+  "module": "dist/component-library-example.esm.js",
   "license": "UNLICENSED",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -24,30 +27,11 @@
   "peerDependencies": {
     "react": ">=16"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "tsdx lint"
-    }
+  "dependencies": {
+    "clsx": "^1.1.1",
+    "styled-components": "^5.2.1",
+    "styled-system": "^5.1.5"
   },
-  "prettier": {
-    "printWidth": 100,
-    "semi": false,
-    "singleQuote": true,
-    "trailingComma": "all"
-  },
-  "name": "component-library-tsdx-example",
-  "author": "Myles O'Connor",
-  "module": "dist/component-library-example.esm.js",
-  "size-limit": [
-    {
-      "path": "dist/component-library-example.cjs.production.min.js",
-      "limit": "10 KB"
-    },
-    {
-      "path": "dist/component-library-example.esm.js",
-      "limit": "10 KB"
-    }
-  ],
   "devDependencies": {
     "@babel/core": "^7.12.10",
     "@size-limit/preset-small-lib": "^4.9.1",
@@ -72,9 +56,25 @@
     "tslib": "^2.1.0",
     "typescript": "^4.1.3"
   },
-  "dependencies": {
-    "clsx": "^1.1.1",
-    "styled-components": "^5.2.1",
-    "styled-system": "^5.1.5"
-  }
+  "prettier": {
+    "printWidth": 100,
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "all"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint"
+    }
+  },
+  "size-limit": [
+    {
+      "path": "dist/component-library-example.cjs.production.min.js",
+      "limit": "10 KB"
+    },
+    {
+      "path": "dist/component-library-example.esm.js",
+      "limit": "10 KB"
+    }
+  ]
 }
