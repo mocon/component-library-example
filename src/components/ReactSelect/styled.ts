@@ -9,6 +9,7 @@ type OptionType = {
 export type ReactSelectStyledProps = {
   as?: any
   ref?: any
+  placeholder?: string
   options: OptionType[]
 }
 
