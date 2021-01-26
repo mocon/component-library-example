@@ -1,6 +1,6 @@
 import React from 'react'
 import { Meta, Story } from '@storybook/react'
-import { Box, BoxProps } from '../components'
+import { Box, BoxProps, Text } from '../components'
 
 const meta: Meta = {
   title: 'Box',
@@ -21,7 +21,7 @@ export default meta
 
 const Template: Story<BoxProps> = args => (
   <Box {...args}>
-    <p>Contents</p>
+    <Text>Contents</Text>
   </Box>
 )
 
@@ -29,4 +29,7 @@ const Template: Story<BoxProps> = args => (
 // https://storybook.js.org/docs/react/workflows/unit-testing
 export const Default = Template.bind({})
 
-Default.args = {}
+Default.args = {
+  backgroundColor: 'lightgray',
+  p: 4,
+}
