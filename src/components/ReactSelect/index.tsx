@@ -12,12 +12,15 @@ export const ReactSelect: FC<ReactSelectProps> = forwardRef<FC, any>(
     const resolvedRef = useCombinedRefs(ref, innerRef)
 
     return (
-      <ReactSelectStyled as={as} className={clsx('ReactSelect')} ref={resolvedRef}>
+      <ReactSelectStyled
+        as={as}
+        className={clsx('ReactSelect')}
+        ref={resolvedRef}
+      >
         <Select
           className="ReactSelectStyles"
           classNamePrefix="ReactSelectStyles"
           {...other}
-          defaultMenuIsOpen={true}
         />
       </ReactSelectStyled>
     )

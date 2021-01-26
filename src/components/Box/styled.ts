@@ -37,5 +37,16 @@ export type BoxStyledProps = BackgroundProps &
 export const BoxStyled = styled.div<BoxStyledProps>`
   display: block;
   font-family: ${({ theme }) => theme.fontFamilies.body};
-  ${compose(background, border, color, flexbox, grid, layout, position, shadow, space, typography)};
+  ${compose(
+    background,
+    border,
+    color,
+    flexbox,
+    grid,
+    layout,
+    position,
+    shadow,
+    space,
+    typography,
+  )};
 `

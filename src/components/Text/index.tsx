@@ -5,13 +5,15 @@ import useCombinedRefs from '../../utils/useCombinedRefs'
 
 export type TextProps = TextStyledProps
 
-export const Text: FC<TextProps> = forwardRef<FC, any>(({ as = 'p', children, ...other }, ref) => {
-  const innerRef = useRef()
-  const resolvedRef = useCombinedRefs(ref, innerRef)
+export const Text: FC<TextProps> = forwardRef<FC, any>(
+  ({ as = 'p', children, ...other }, ref) => {
+    const innerRef = useRef()
+    const resolvedRef = useCombinedRefs(ref, innerRef)
 
-  return (
-    <TextStyled as={as} className={clsx('Text')} ref={resolvedRef} {...other}>
-      {children}
-    </TextStyled>
-  )
-})
+    return (
+      <TextStyled as={as} className={clsx('Text')} ref={resolvedRef} {...other}>
+        {children}
+      </TextStyled>
+    )
+  },
+)

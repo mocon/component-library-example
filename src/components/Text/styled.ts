@@ -37,5 +37,16 @@ export type TextStyledProps = BackgroundProps &
 export const TextStyled = styled.p<TextStyledProps>`
   display: block;
   font-family: ${({ theme }) => theme.fontFamilies.body};
-  ${compose(background, border, color, flexbox, grid, layout, position, shadow, space, typography)};
+  ${compose(
+    background,
+    border,
+    color,
+    flexbox,
+    grid,
+    layout,
+    position,
+    shadow,
+    space,
+    typography,
+  )};
 `
