@@ -1,3 +1,4 @@
-import { Box, Text } from './components'
+// All components must be exported from here
+import { Box, ReactSelect, Text } from './components'
 
-export { Box, Text }
+export { Box, ReactSelect, Text }
