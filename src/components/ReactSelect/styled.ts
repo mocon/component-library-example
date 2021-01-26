@@ -10,6 +10,7 @@ export type ReactSelectStyledProps = {
   as?: any
   ref?: any
   placeholder?: string
+  onChange?: Function
   options: OptionType[]
 }
 
